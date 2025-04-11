@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Шиншиллы Рок-Группа</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Аудиоплеер (скрытый) -->
+    <audio id="background-music" autoplay>
+        <source src="music/Шиншилла любит молоко.mp3" type="audio/mpeg">
+        Ваш браузер не поддерживает аудио элемент.
+    </audio>
+    
+    <!-- Кастомный музыкальный плеер -->
+    <div class="custom-player">
+        <div class="player-container">
+            <div class="player-info">
+                <div class="track-title" id="track-title">Шиншилла любит молоко</div>
+            </div>
+            <div class="player-controls">
+                <button id="prev-track" class="control-btn"><i class="fas fa-step-backward"></i></button>
+                <button id="play-pause" class="control-btn"><i class="fas fa-pause"></i></button>
+                <button id="next-track" class="control-btn"><i class="fas fa-step-forward"></i></button>
+            </div>
+            <div class="volume-control">
+                <i class="fas fa-volume-up" id="volume-icon"></i>
+                <input type="range" id="volume-slider" min="0" max="1" step="0.1" value="0.7">
+            </div>
+        </div>
+    </div>
+    
+    <!-- Оверлей для мобильного меню -->
+    <div class="overlay"></div>
+    
+    <!-- Хедер с навигацией -->
+    <header>
+        <div class="container">
+            <div class="logo" data-aos="fade-right" data-aos-duration="1000">
+                <h1>Шиншиллы</h1>
+            </div>
+            <div class="burger-menu">
+                <div class="burger-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <nav data-aos="fade-left" data-aos-duration="1000">
+                <ul>
+                    <li><a href="#home">Главная</a></li>
+                    <li><a href="#about">О группе</a></li>
+                    <li><a href="#music">Музыка</a></li>
+                    <li><a href="#gallery">Галерея</a></li>
+                    <li><a href="#contact">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Главный экран с большой фотографией -->
+    <section id="home" class="hero">
+        <div class="hero-image">
+            <img src="img/A musical rock band.jpeg" alt="Рок-группа шиншилл">
+        </div>
+        <div class="hero-content" data-aos="zoom-in" data-aos-duration="1200">
+            <h2>Пушистый рок</h2>
+            <p>Самая мягкая и пушистая рок-группа в мире</p>
+            <a href="#music" class="btn">Слушать музыку</a>
+        </div>
+    </section>
+
+    <!-- О группе -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">О группе</h2>
+            <div class="about-content">
+                <div class="about-text" data-aos="fade-right" data-aos-delay="200">
+                    <p>Мы - уникальная рок-группа, состоящая из четырех талантливых шиншилл. Наша музыка сочетает в себе энергию рока и пушистую нежность.</p>
+                    <p>Группа была основана в 2023 году и с тех пор покоряет сердца слушателей своими мелодичными композициями и энергичными выступлениями.</p>
+                    <p>Каждый участник нашей группы обладает уникальным стилем и характером, что делает нашу музыку особенной и неповторимой.</p>
+                </div>
+                <div class="about-image" data-aos="fade-left" data-aos-delay="200">
+                    <img src="img/a chinchilla is rocking out at a nightclub.  .jpeg" alt="Шиншилла на сцене">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Участники группы -->
+    <section id="members" class="members">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Участники группы</h2>
+            <div class="members-grid">
+                <div class="member" data-aos="flip-left" data-aos-delay="100">
+                    <img src="img/a chinchilla is rocking out at a nightclub.   (1).jpeg" alt="Участник 1">
+                    <h3>Пушистик</h3>
+                    <p>Вокал, гитара</p>
+                </div>
+                <div class="member" data-aos="flip-left" data-aos-delay="200">
+                    <img src="img/a chinchilla is rocking out at a nightclub.   (2).jpeg" alt="Участник 2">
+                    <h3>Серый</h3>
+                    <p>Бас-гитара</p>
+                </div>
+                <div class="member" data-aos="flip-left" data-aos-delay="300">
+                    <img src="img/a chinchilla is rocking out at a nightclub.   (3).jpeg" alt="Участник 3">
+                    <h3>Мягкий</h3>
+                    <p>Ударные</p>
+                </div>
+                <div class="member" data-aos="flip-left" data-aos-delay="400">
+                    <img src="img/a chinchilla is rocking out at a nightclub.  .jpeg" alt="Участник 4">
+                    <h3>Пушок</h3>
+                    <p>Клавишные</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Музыка -->
+    <section id="music" class="music-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Наша музыка</h2>
+            <div class="music-list" data-aos="fade-up" data-aos-delay="200">
+                <div class="music-item">
+                    <div class="music-info">
+                        <h3>Побег Шиншиллы</h3>
+                        <p>Дебютный сингл</p>
+                    </div>
+                    <audio controls>
+                        <source src="music/Побег Шиншиллы.mp3" type="audio/mpeg">
+                        Ваш браузер не поддерживает аудио элемент.
+                    </audio>
+                </div>
+                <div class="music-item">
+                    <div class="music-info">
+                        <h3>Шиншилла любит молоко</h3>
+                        <p>Из альбома "Пушистые мечты"</p>
+                    </div>
+                    <audio controls>
+                        <source src="music/Шиншилла любит молоко.mp3" type="audio/mpeg">
+                        Ваш браузер не поддерживает аудио элемент.
+                    </audio>
+                </div>
+                <div class="music-item">
+                    <div class="music-info">
+                        <h3>Новогодняя шиншилла</h3>
+                        <p>Праздничный хит</p>
+                    </div>
+                    <audio controls>
+                        <source src="music/Новогодняя шиншилла.mp4" type="audio/mp4">
+                        Ваш браузер не поддерживает аудио элемент.
+                    </audio>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Галерея -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Галерея</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="img/a chinchilla is rocking out at a nightclub.   (1).jpeg" alt="Галерея 1">
+                </div>
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="img/a chinchilla is rocking out at a nightclub.   (2).jpeg" alt="Галерея 2">
+                </div>
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="300">
+                    <img src="img/a chinchilla is rocking out at a nightclub.   (3).jpeg" alt="Галерея 3">
+                </div>
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="400">
+                    <img src="img/a chinchilla is rocking out at a nightclub.  .jpeg" alt="Галерея 4">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакты -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Связаться с нами</h2>
+            <div class="contact-content">
+                <div class="contact-info" data-aos="fade-right" data-aos-delay="200">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>chinchillas@rock.ru</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <p>+7 (123) 456-78-90</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Москва, Россия</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-vk"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-telegram"></i></a>
+                    </div>
+                </div>
+                <form class="contact-form" data-aos="fade-left" data-aos-delay="200">
+                    <div class="form-group">
+                        <input type="text" placeholder="Ваше имя" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Ваш email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Ваше сообщение" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Отправить</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Шиншиллы Рок-Группа. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <!-- Скрипты -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
